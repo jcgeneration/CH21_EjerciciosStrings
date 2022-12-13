@@ -23,7 +23,9 @@ btnEnviar.addEventListener("click", function(event){
         alertError.style.display="block";
         alertError.innerHTML += "<br/>El correo electrónico no es válido.";
     }//
-    let RFCRegex = / /;
+    let RFCRegex = /^[A-Z]{4}[0-9]{6}[A-Z0-9]{3}$/;
+    //  /^[A-Z]{4}\d{6}\w{3}$/;
+     exampleFormControlInput2.value = exampleFormControlInput2.value.toUpperCase();
     if (exampleFormControlInput2.value.match(RFCRegex) == null) {
         alertError.style.display="block";
         alertError.innerHTML += "<br/>El RFC no es válido.";
